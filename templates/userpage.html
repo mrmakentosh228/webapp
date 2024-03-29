@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+ 
+{% block content %}
+    <h1>Это страница {{ username }}</h1>
+	<h2>Это его новости:</h2>
+{% for item in news %}
+    <div class="alert alert-dark" role="alert">
+        <h2>{{item[1]}}</h2>
+        <div>{{item[2]}}</div>
+    </div>
+{% endfor %}
+{% endblock %}
